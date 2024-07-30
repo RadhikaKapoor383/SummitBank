@@ -1,0 +1,27 @@
+create database BankSystem;
+
+create database BankSystem;
+CREATE TABLE accounts (
+    SNO INT PRIMARY KEY AUTO_INCREMENT,
+    accountID VARCHAR(255) NOT NULL,
+    Password VARCHAR(255) NOT NULL,
+    Balance Decimal(15, 2),
+    FirstName VARCHAR(255),
+    SecondName VARCHAR(255),
+    Address VARCHAR(255),
+    PhoneNumber VARCHAR(255),
+    CNIC VARCHAR(255),
+    City VARCHAR (255),
+    DOB Date,
+    Email VARCHAR(100),
+    EmergancyNum VARCHAR(255)
+);
+
+CREATE TABLE Users (
+    TransactionID INT AUTO_INCREMENT PRIMARY KEY,
+    accountID VARCHAR(255) NOT NULL,
+    TransactionType VARCHAR(255) NOT NULL,
+    amount decimal(15, 2),
+    transcationDate timeStamp,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
